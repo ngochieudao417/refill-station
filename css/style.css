@@ -1,0 +1,25 @@
+
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.6rem; /* tương đương 16px */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+  }
+  
+  /* 3. CSS Variables: màu chủ đạo (eco-friendly vibes) */
+  :root {
+    --primary-color: #37c363;     /*màu chủ đạo, dùng cho nav bar, nút chính, title */
+    --secondary-color: #8fd9c4;   /*dùng cho hover, section */
+    --accent-color: #b8d9d0;      /* dùng cho card, khung thông tin  */
+    --text-color: #333333;  
+    --secondary-text-color: #A8C66C;      /* Màu chữ chính */
+    --brd-color: #B8D9D0;          /* dùng cho border */
+    --bg-color: #E8F1FD;            /*dùng cho background */
+  }
+  

@@ -1,0 +1,131 @@
+* {
+    
+}
+
+/* HOMEPAGE SECTION */
+#homepage {
+    display: grid;
+    grid-template:
+    "header header header header"
+    "about about about about"
+    ". content content ."
+    "footer footer footer footer"
+    / 1fr 2fr 2fr 1fr;
+}
+
+/* header */
+
+/* navigation */
+.header {
+    z-index: 1;
+    grid-area: header;
+    width: 100%;
+    position: fixed;
+    border: 0.2rem solid var(--brd-color);
+    height: 6rem;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+.header__nav {
+  
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.header__nav-item {
+    padding: 0 2rem;
+
+    height: 100%;
+    text-align: center;
+    line-height: 6rem;
+
+}
+
+.header__nav-item:hover {
+    background-color: var(--secondary-color);
+
+}
+
+.header__nav-link {
+    display: inline-block;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+    text-decoration: none;
+}
+/* end navigation */
+
+/* log in button */
+.header__log-button  {
+    position: absolute;
+    right: 5%;
+    top: 24%;
+    font-size: 18px;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    border: 0.2rem solid var(--brd-color);
+    border-radius: 2.4rem;
+    cursor: pointer;
+    
+}
+
+.header__log-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* end header */
+
+/* aboout */
+.about {
+    grid-area: about;
+    padding-top: 6.3rem;
+    position: relative;
+}
+
+.about__title {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size: 50px;
+    color: var(--secondary-text-color);
+}
+
+.about__image {
+    width: 100%;
+}
+/* end about */
+
+/* content */
+.content {
+    grid-area: content;
+    padding-top: 2.4rem;
+}
+
+.content__title {
+    font-size: 20px;
+    line-height: 1.8rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.content__description {
+    padding-top: 1rem;
+    font-size: 20px;
+    line-height: 2rem;
+}
+/* end content */
+
+/* footer */
+.footer {
+    margin-top: 2rem;
+    grid-area: footer;
+    text-align: center;
+    height:  8rem;
+    line-height: 8rem;
+    background-color: var(--primary-color);
+}
+/* end footer */
+/* END HOMEPAGE */
