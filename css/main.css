@@ -142,7 +142,7 @@
 /* end header */
 
 /* aboout */
-.about {
+#homepage .about {
   width: 100%;
   max-height: 40rem;
   overflow: hidden;
@@ -228,6 +228,12 @@
     / 1fr 2fr 2fr 1fr;
 }
 
+#recruitmentpage .about {
+  grid-area: about;
+  padding-top: 12.3rem;
+  position: relative;
+}
+
 /* Banner */
 .recruitment__banner {
   display: flex;
@@ -238,6 +244,8 @@
 
 .recruitment__banner--img {
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Header section */
