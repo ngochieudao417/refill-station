@@ -1,7 +1,11 @@
 * {
 }
 
-/* HOMEPAGE SECTION */
+
+/* ===============================
+   HOMEPAGE PAGE SECTION
+================================= */
+
 #homepage {
   display: grid;
   grid-template:
@@ -14,22 +18,77 @@
 
 /* header */
 
-/* navigation */
+
 .header {
   z-index: 1000;
   grid-area: header;
   width: 100%;
   position: fixed;
   border: 0.2rem solid var(--brd-color);
-  height: 6rem;
+  height: 12rem;
   display: flex;
+  flex-direction: column;
   background-color: var(--primary-color);
 }
+/* top header: search, logo, login/signin, cart */
+.header__top {
+  background-color: var(--bg-color);
+  display: flex;
+  height: 9.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.header__search {
+  border: 0.1rem solid var(--black-color);
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+ 
+}
+
+.header__search-box, 
+.header__search-box:focus {
+  background-color: var(--bg-color);
+  outline: none;
+  border: none;
+  width: 20rem;
+  font-size: 20px;
+  height: 2.5rem;
+}
+
+.header__brand-logo {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+/* log in button */
+.header__log-button {
+  /* position: absolute;
+  right: 3%;
+  top: 10%; */
+  font-size: 18px;
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  border: 0.2rem solid var(--brd-color);
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+.header__cart-button {
+
+}
+
+.header__action-button {
+  width: 22rem;
+  padding: 0.5rem;
+}
+/* end top header */
+
+/* navigation */
 .header__nav {
   display: flex;
   height: 100%;
-  position: relative;
+  justify-content: space-evenly;
 }
 
 .header__nav-item {
@@ -52,20 +111,29 @@
   color: var(--text-color);
   text-decoration: none;
 }
-/* end navigation */
 
-/* log in button */
-.header__log-button {
-  position: absolute;
-  right: 5%;
-  top: 24%;
-  font-size: 18px;
-  padding: 0.8rem;
-  background-color: var(--primary-color);
-  border: 0.2rem solid var(--brd-color);
-  border-radius: 2.4rem;
-  cursor: pointer;
+.header__nav-item--showed-sub-nav:hover .header__sub-nav {
+  display: block;
 }
+
+.header__sub-nav {
+  display: none;
+  position: absolute;
+  left: 49%;
+  background-color: var(--primary-color);
+  width: 15%;
+}
+
+.header__sub-nav-item:hover {
+  background-color: var(--secondary-color);
+}
+
+.header__sub-nav-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* end navigation */
 
 .header__log-button:hover {
   background-color: var(--secondary-color);
@@ -75,22 +143,31 @@
 
 /* aboout */
 .about {
+  width: 100%;
+  max-height: 40rem;
+  overflow: hidden;
+  margin-top: 6rem;
   grid-area: about;
   padding-top: 6.3rem;
   position: relative;
 }
 
-.about__title {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  font-size: 50px;
-  color: var(--secondary-text-color);
+/* slider */
+
+.about__slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; /* vì có 4 ảnh */
+  height: 100%;
 }
 
-.about__image {
-  width: 100%;
+.about__slide-img {
+  width: 25%;
+  height: 100%; 
+  flex-shrink: 0;
+  object-fit: contain;
 }
+
 /* end about */
 
 /* content */
@@ -104,12 +181,24 @@
   line-height: 1.8rem;
   font-style: italic;
   opacity: 0.8;
+  padding: 2rem;
+  background-color: var(--bg-text-color);
+  border: 6px solid var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  
 }
 
 .content__description {
+  margin-top: 2rem;
   padding-top: 1rem;
   font-size: 20px;
   line-height: 2rem;
+  padding: 2rem;
+  background-color: var(--bg-text-color);
+  border: 6px solid var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 /* end content */
 
