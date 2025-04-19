@@ -25,7 +25,7 @@
   width: 100%;
   position: fixed;
   border: 0.2rem solid var(--brd-color);
-  height: 12rem;
+  height: 11rem;
   display: flex;
   flex-direction: column;
   background-color: var(--primary-color);
@@ -34,12 +34,13 @@
 .header__top {
   background-color: var(--bg-color);
   display: flex;
-  height: 9.5rem;
+  height: 5rem;
   justify-content: space-around;
   align-items: center;
 }
 
 .header__search {
+  height: 2.5rem;
   border: 0.1rem solid var(--black-color);
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
@@ -63,9 +64,7 @@
 
 /* log in button */
 .header__log-button {
-  /* position: absolute;
-  right: 3%;
-  top: 10%; */
+
   font-size: 18px;
   padding: 0.8rem;
   background-color: var(--primary-color);
@@ -87,7 +86,7 @@
 /* navigation */
 .header__nav {
   display: flex;
-  height: 100%;
+  height: 60%;
   justify-content: space-evenly;
 }
 
