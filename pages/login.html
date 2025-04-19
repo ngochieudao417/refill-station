@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/image/icon/themify-icons/themify-icons.css">
+    <title>REFILL STATION</title>
+  </head>
+<body>
+    <div class="loginpage">
+        <div class="header">
+            <div class="header__top">
+              <div class="header__search">
+                <input
+                  type="text"
+                  class="header__search-box"
+                  placeholder="Tìm kiếm..."
+                  name=""
+                  id=""
+                />
+                <i class="header_search-icon ti-search"></i>
+              </div>
+              <div class="header__logo">
+                <img
+                  src="/image/logo/NEU_logo.svg"
+                  alt=""
+                  class="header__brand-logo"
+                />
+                <img
+                  src="/image/logo/gnc_logo.svg"
+                  alt=""
+                  class="header__brand-logo"
+                />
+                <img
+                  src="/image/logo/fuwa3e-logo.svg"
+                  style="width: 10.5rem"
+                  alt=""
+                  class="header__brand-logo"
+                />
+              </div>
+              <div class="header__action-button">
+                <button class="header__log-button">
+                  <a href="/pages/login.html" class="header__log-link">
+                    Đăng kí / Đăng nhập
+                  </a>
+                </button>
+                <button class="header__log-button header__cart-button">
+                  Giỏ hàng
+                  <i class="ti-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <ul class="header__nav">
+              <li class="header__nav-item">
+                <a href="/index.html" class="header__nav-link">Trang chủ</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/pages/introduction.html" class="header__nav-link"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="/pages/products.html" class="header__nav-link"
+                  >Sản phẩm / Dịch vụ</a
+                >
+              </li>
+              <li class="header__nav-item header__nav-item--showed-sub-nav">
+                <a href="/pages/news.html" class="header__nav-link">
+                  Tin tức
+                  <i class="ti-arrow-circle-down"></i>
+                </a>
+                <ul class="header__sub-nav">
+                  <li class="header__sub-nav-item">
+                    <a href="/pages/info.html" class="header__sub-nav-link"
+                      >Thông tin</a
+                    >
+                  </li>
+                  <li class="header__sub-nav-item">
+                    <a href="/pages/event.html" class="header__sub-nav-link"
+                      >Sự Kiện</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a href="/pages/contact.html" class="header__nav-link">Liên hệ</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/pages/fag.html" class="header__nav-link">FAQ</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/pages/recruitment.html" class="header__nav-link"
+                  >Tuyển dụng</a
+                >
+              </li>
+            </ul>
+        </div>
+
+        <div class="auth__container">
+            <div class="auth" id="auth">
+              <div class="auth__overlay"></div>
+          
+              <div class="auth__wrapper">
+                <!-- Form đăng nhập -->
+                <div class="auth__form auth__form--login">
+                  <h2 class="auth__title">Đăng nhập</h2>
+                  <input type="text" placeholder="Email" class="auth__input" />
+                  <input type="password" placeholder="Mật khẩu" class="auth__input" />
+                  <button class="auth__button auth__button--login" onclick="switchToRegister()">
+                    <span>Đăng nhập</span>
+                  </button>
+                </div>
+              
+                <!-- Form đăng ký -->
+                <div class="auth__form auth__form--register">
+                  <h2 class="auth__title">Đăng ký</h2>
+                  <input type="text" placeholder="Tên" class="auth__input" />
+                  <input type="email" placeholder="Email" class="auth__input" />
+                  <input type="password" placeholder="Mật khẩu" class="auth__input" />
+                  <button class="auth__button auth__button--register" onclick="switchToLogin()">
+                    <span>Đăng ký</span>
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+
+
+  <script>
+    const auth = document.getElementById('auth');
+
+function switchToLogin() {
+  if (auth.classList.contains('auth--active')) {
+    auth.classList.remove('auth--active');
+  }
+}
+
+function switchToRegister() {
+  if (!auth.classList.contains('auth--active')) {
+    auth.classList.add('auth--active');
+  }
+}
+  </script>
+
+</body>
+</html

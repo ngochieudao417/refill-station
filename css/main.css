@@ -1,7 +1,6 @@
 * {
 }
 
-
 /* ===============================
    HOMEPAGE PAGE SECTION
 ================================= */
@@ -17,7 +16,6 @@
 }
 
 /* header */
-
 
 .header {
   z-index: 1000;
@@ -44,10 +42,9 @@
   border: 0.1rem solid var(--black-color);
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
- 
 }
 
-.header__search-box, 
+.header__search-box,
 .header__search-box:focus {
   background-color: var(--bg-color);
   outline: none;
@@ -64,7 +61,6 @@
 
 /* log in button */
 .header__log-button {
-
   font-size: 18px;
   padding: 0.8rem;
   background-color: var(--primary-color);
@@ -74,7 +70,6 @@
 }
 
 .header__cart-button {
-
 }
 
 .header__action-button {
@@ -162,7 +157,7 @@
 
 .about__slide-img {
   width: 25%;
-  height: 100%; 
+  height: 100%;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -185,7 +180,6 @@
   border: 6px solid var(--accent-color);
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  
 }
 
 .content__description {
@@ -391,7 +385,7 @@
 }
 
 .method__date {
-  font-size: 1.4rem;  
+  font-size: 1.4rem;
 }
 
 /* Footer */
@@ -437,5 +431,217 @@
 
   .recruitment__list-item {
     font-size: 1.4rem;
+  }
+}
+
+/* ===============================
+     Login Page
+  ================================= */
+.header__log-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.auth__container {
+  padding-top: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 60rem;
+}
+
+.auth {
+  position: relative;
+  width: 80%;
+  height: 30rem;
+  overflow: hidden;
+  background: #f0f0f0;
+  background-color: var(--bg-text-color);
+  border: 6px solid var(--accent-color);
+  border-radius: 2.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.auth__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.8s ease-in-out;
+}
+
+.auth__form {
+  width: 50%;
+  padding: 3.6rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+}
+
+.auth__form--login {
+  background-image: url("login-bg.jpg");
+}
+
+.auth__form--register {
+  background-image: url("register-bg.jpg");
+}
+
+.auth__title {
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.auth__input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.auth__button {
+  background: var(--primary-color);
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  width: 60%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 3;
+  text-wrap: nowrap;
+}
+
+.auth__button--login {
+  margin-top: 6rem;
+}
+
+.auth__button--register {
+  margin-top: 2.4rem;
+}
+
+.auth__button:hover {
+  background: var(--secondary-color);
+  scale: 1.1;
+  transition: scale 0.8s ease;
+}
+
+.auth__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("../image/homepage/homepage_background1.jpg"); /* ảnh ngang bạn thêm vào */
+  background-size: 200% 100%; /* cho phép cuộn ngang ảnh */
+  background-position: left center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transition: transform 0.8s ease-in-out, background-position 0.8s ease-in-out,
+    border-radius 1.2s ease-in-out;
+  border-radius: 2rem 0 0 2rem; /* bo góc trái nếu muốn */
+  pointer-events: none;
+}
+
+.auth--active .auth__overlay {
+  transform: translateX(100%);
+  background-position: right center;
+  border-radius: 0 2rem 2rem 0; /* bo góc phải nếu muốn */
+}
+
+.auth__arrow {
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.auth__button--login:hover .auth__arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.auth__button--register:hover .auth__arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+/* Dưới 1024px - Tablet */
+@media (max-width: 1024px) {
+  .auth {
+    height: 26rem;
+  }
+
+  .auth__title {
+    font-size: 2rem;
+  }
+
+  .auth__button {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .auth__button--login {
+    margin-top: 4.8rem;
+  }
+
+  .auth__button--register {
+    margin-top: 2.2rem;
+  }
+}
+
+/* Dưới 768px - Mobile */
+@media (max-width: 768px) {
+  .auth {
+    height: 20rem;
+  }
+
+  .auth__title {
+    font-size: 1.6rem;
+  }
+
+  .auth__button {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .auth__form {
+    margin-top: 0rem;
+    padding: 1.2rem;
+  }
+}
+
+/* Dưới 480px - Điện thoại nhỏ */
+@media (max-width: 480px) {
+  .auth {
+    height: 16rem;
+  }
+
+  .auth__title {
+    font-size: 1.4rem;
+  }
+
+  .auth__button {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .auth__input {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .auth__form {
+    margin-top: 0rem;
+    padding: 0.6rem;
   }
 }
